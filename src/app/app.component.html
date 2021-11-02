@@ -1,5 +1,18 @@
 <h1>{{title}}</h1>
+<hr>
+<app-card *ngFor="let card of cards"
+          [rank]="card.rank"
+          [suit]="card.suit"
+style="display: inline-block"></app-card>
 
 <hr>
 
-<app-card></app-card>
+<p>Score: {{onAddScore()}}</p>
+<button type="button" (click)="onAddCard()">Give another card</button>
+<button type="reset" (click)="onReset()">Reset</button>
+
+<div *ngIf="click">
+  <app-card *ngFor="let item of onReset()" [rank]="item.rank" [suit]="item.suit"></app-card>
+</div>
+
+

@@ -1,7 +1,11 @@
-<span class="card">
-    <span class="rank">K</span>
-    <span class="suit">♦</span>
-</span>
+<div class="playingCards faceImages">
+  <span [ngClass]="getClassName(rank, suit)">
+    <span class="rank">{{rank}}</span>
+    <span class="suit">{{getSuit(suit)}}</span>
+  </span>
+</div>
+
+
 
 
 
